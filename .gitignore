@@ -11,3 +11,7 @@ dist
 coverage
 *.log
 .env.example
+<<<<<<< HEAD
+=======
+
+>>>>>>> 29d0a5b (.)
