@@ -34,11 +34,13 @@ pnpm install
 
 ### 2. Configure environment variables
 
-Copy the example env file and fill in your credentials:
+Create a local env file from the committed template (placeholders only — no real keys):
 
 ```bash
-cp .env.example .env
+cp env.template .env
 ```
+
+Fill in values from your Supabase project (Settings → API), Mapbox account, and other services. **Never commit `.env` or `.env.example`.**
 
 Required variables:
 
