@@ -1,0 +1,9 @@
+{
+  "name": "@shuttle/config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./eslint-base": "./eslint-base.js",
+    "./tsconfig-base": "./tsconfig-base.json"
+  }
+}

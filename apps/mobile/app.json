@@ -1,0 +1,79 @@
+{
+  "expo": {
+    "name": "The Shuttle App",
+    "slug": "the-shuttle-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "shuttle",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#2563EB"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "gh.ug.shuttleapp",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "The Shuttle App uses your location to show shuttle positions on the map.",
+        "NSLocationAlwaysUsageDescription": "The Shuttle App needs your location in the background to broadcast your shuttle position to students on campus.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "The Shuttle App needs your location in the background to broadcast your shuttle position to students on campus.",
+        "UIBackgroundModes": ["location", "fetch"]
+      }
+    },
+    "android": {
+      "package": "gh.ug.shuttleapp",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#2563EB"
+      },
+      "permissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": ""
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "The Shuttle App needs your location in the background to broadcast your shuttle position to students on campus.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isIosBackgroundLocationEnabled": true
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#2563EB"
+        }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "organization": "${SENTRY_ORG}",
+          "project": "${SENTRY_PROJECT}"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "${EAS_PROJECT_ID}"
+      }
+    }
+  }
+}

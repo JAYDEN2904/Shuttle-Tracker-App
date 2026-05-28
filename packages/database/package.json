@@ -1,0 +1,25 @@
+{
+  "name": "@shuttle/database",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./database.types": "./src/database.types.ts"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@shuttle/shared-types": "workspace:*",
+    "@supabase/supabase-js": "^2.106.2"
+  },
+  "devDependencies": {
+    "@shuttle/config": "workspace:*",
+    "typescript": "^5.4.5"
+  }
+}
